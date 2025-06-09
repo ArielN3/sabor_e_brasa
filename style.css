@@ -19,10 +19,9 @@ body {
     background-color: var(--cinza-claro);
     color: var(--preto-lacrado);
     line-height: 1.6;
-    background-image: url('https://i.imgur.com/ZYwD6yS.png');
     background-size: 300px;
     background-blend-mode: overlay;
-    background-color: rgba(223, 217, 217, 0.9);
+    background-color: rgb(255, 255, 255);
 }
 
 .container {
@@ -34,7 +33,7 @@ body {
     border-radius: 8px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 10px solid rgba(0, 0, 0, 0.05);
 }
 
 header {
