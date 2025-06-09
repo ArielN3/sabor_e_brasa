@@ -1,0 +1,80 @@
+.cardapio-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardapio-item {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.cardapio-item:hover {
+    transform: translateY(-5px);
+}
+
+.card-imagem {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-conteudo {
+    padding: 15px;
+}
+
+.card-conteudo h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.ingredientes {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.card-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e63946;
+}
+
+.adicionar-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s;
+}
+
+.adicionar-btn:hover {
+    background: #c1121f;
+}
+
+.adicionar-btn span {
+    font-size: 1.1rem;
+}

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Restaurante Chinês Imperial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="img.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="restaurant-header">
+        <div class="logo-container"> 
+            <img src="logo-facul.png" alt="Restaurante Lóng zhī wèi" class="header-logo">
+        </div>
+            <h3>Sabor que vem da Brasa, paixão em cada mordida</h3>
+            
+        </header>
+
+        <section>
+            <h2>👨‍🍳 Clássicos da Brasa</h2>
+
+            <div class="cardapio-grid">
+
+
+                <div class="cardapio-container">
+                    <div class="cardapio-item">
+                        <div class="card-imagem">
+                            <img src="https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2022/05/mafe-estudio-LV2p9Utbkbw-unsplash.jpg"
+                                alt="X-Bacon Supremo">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>🍔 Brasa Burger</h3>
+                            <div class="ingredientes">Pão brioche, blend artesanal 180 g, queijo prato, alface americana, tomate, maionese da casa.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 28,90</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('X-Bacon Supremo', 30)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardapio-item">
+                        <div class="card-imagem">
+                            <img src="https://moinhoglobo.com.br/wp-content/uploads/2019/05/16-hamburguer.jpeg"
+                                alt="Monstro da Brasa">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>🍔 Sabor Original</h3>
+                            <div class="ingredientes">Pão australiano, carne 180 g, cheddar cremoso, cebola caramelizada, barbecue artesanal.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 32,90</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Monstro da Brasa', 35)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardapio-container">
+                    <div class="cardapio-item">
+                        <div class="card-imagem">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCoUhMnPmRh4ILmy00z6avGA5amn6L_eCCRg&s"
+                                alt="X-Fogo">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>🔥Cheese Bacon da Brasa</h3>
+                            <div class="ingredientes">Pão de leite, carne 180 g, queijo muçarela, bacon crocante, maionese defumada.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 36,90</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('X-Fogo', 40)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardapio-item">
+                        <div class="card-imagem">
+                            <img src="https://s2-casavogue.glbimg.com/GRF9KCq-1hiz5uSs-xX9Go_KqIc=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2022/p/X/eb4KQdToys327cGqnRGg/receita-ceboloni-bacon.jpg"
+                                alt="X-Cheddar Cremoso">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>🧀Brasa Supreme</h3>
+                            <div class="ingredientes">Pão brioche selado na manteiga, carne Angus 180 g, queijo gorgonzola, rúcula, cebola roxa.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 42,90</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('X-Cheddar Cremoso', 25)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardapio-container">
+                    <div class="cardapio-item">
+                        <div class="card-imagem">
+                            <img src="https://img.freepik.com/fotos-premium/suculenta-carne-de-porco-desfiada-para-churrasco-em-um-fumeiro-criado-com-ia-generativa_419341-53218.jpg"
+                                alt="Barbecue Explosivo">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>🥓Sabor & Brasa Prime</h3>
+                            <div class="ingredientes">Double burger Angus 2×150 g, queijo chesidar inglês, bacon artesanal, picles, molho Sabor & Brasa.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 47,90</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Barbecue Explosivo', 45)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardapio-item">
+                        <div class="card-imagem">
+                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                                alt="Frango Crocante">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>🍔 Veggie da Brasa</h3>
+                            <div class="ingredientes">Hambúrguer de grão-de-bico com especiarias, pão integral, tomate, alface, maionese vegana.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 31,90</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Frango Crocante', 30)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acompanhamentos-container">
+                    <h2>🍟 Acompanhamentos</h2>
+                    <div class="cardapio-container">
+                        <div class="cardapio-item">
+                            <div class="card-imagem">
+                                <img src="https://blog-obahortifruti.redeoba.com.br/wp-content/uploads/2022/11/260-88_TEXTO-BLOG-EXTRA-BATATAS-FRESCAS-NOV-22-1920X792.jpg" alt="Batata Rústica com Páprica">
+                            </div>
+                            <div class="card-conteudo">
+                                <h3>Batata Rústica com Páprica</h3>
+                                <div class="ingredientes">Batatas rústicas temperadas com páprica e ervas.</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 12,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Batata Rústica com Páprica', 12)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardapio-item">
+                            <div class="card-imagem">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHBFauCfSqE9gxI-GV4pwgwNT8LrApNHFew&s" alt="Onion Rings Crocantes">
+                            </div>
+                            <div class="card-conteudo">
+                                <h3>Onion Rings Crocantes</h3>
+                                <div class="ingredientes">Anéis de cebola empanados e crocantes.</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 14,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Onion Rings Crocantes', 14)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardapio-item">
+                            <div class="card-imagem">
+                                <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg" alt="Molho Sabor & Brasa">
+                            </div>
+                            <div class="card-conteudo">
+                                <h3>Molho Sabor & Brasa</h3>
+                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 4,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bebidas-sobremesas-container">
+                    <h2>🥤 Bebidas</h2>
+                    <div class="cardapio-container">
+                        <div class="cardapio-item">
+                         
+                            <div class="card-conteudo">
+                                <h3>Refrigerante Iaia</h3>
+                                <div class="ingredientes">Lata 350ml</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 6,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Refrigerante Iaia', 6)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardapio-item">
+                            
+                            <div class="card-conteudo">
+                                <h3>Suco Natural</h3>
+                                <div class="ingredientes">Laranja ou limão</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 8,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Suco Natural', 8)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardapio-item">
+                           
+                            <div class="card-conteudo">
+                                <h3>Cerveja Artesanal (long neck)</h3>
+                                <div class="ingredientes">Long neck 330ml</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 13,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>🍨 Sobremesas</h2>
+                    <div class="cardapio-container">
+                        <div class="cardapio-item">
+                            <div class="card-imagem">
+                                <img src="https://www.specialita.com/wp-content/uploads/2022/07/brownie-de-chocoavela-com-sorvete.jpg" alt="Brownie quente com sorvete">
+                            </div>
+                            <div class="card-conteudo">
+                                <h3>Brownie quente com sorvete</h3>
+                                <div class="ingredientes">Brownie de chocolate, sorvete de creme</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 18,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Brownie quente com sorvete', 18)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardapio-item">
+                            <div class="card-imagem">
+                                <img src="https://canaldareceita.com.br/wp-content/uploads/2025/05/Mini-Churros-Recheados-com-Doce-de-Abobora-com-Coco.jpg " alt="Mini churros recheados">
+                            </div>
+                            <div class="card-conteudo">
+                                <h3>Mini churros recheados</h3>
+                                <div class="ingredientes">Porção com doce de leite</div>
+                                <div class="card-rodape">
+                                    <div class="preco">R$ 16,00</div>
+                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Mini churros recheados', 16)">
+                                        <span>+</span> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>
+
+       
+
+        <section class="carrinho-container">
+            <h2>🛒 Seu Pedido Imperial</h2>
+            <ul id="lista-carrinho"></ul>
+            <div id="total">Total: R$ 0,00</div>
+
+            <div id="tempo-espera">
+                ⏱️ <strong>Tempo médio de preparo:</strong> 30-40 minutos
+            </div>
+        </section>
+
+        <section class="info-cliente">
+            <h2>📋 Informações do Cliente</h2>
+
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Como devemos chamá-lo?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">WhatsApp</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mesa">Mesa/Entrega</label>
+                <input type="text" id="mesa" placeholder="Número da mesa ou endereço" required>
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" placeholder="Alergias, modificações ou pedidos especiais"></textarea>
+            </div>
+
+            <button class="enviar-btn" onclick="enviarPedido()">
+                📤 Enviar Pedido via WhatsApp
+            </button>
+        </section>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Preparando seu pedido imperial...</p>
+        </div>
+    </div>
+
+    <footer class="footer-imperial">
+        <div class="footer-info">
+            <div>
+                <strong>Endereço:</strong> Rua do Sabon, 123 – Centro
+            </div>
+            <div>
+                <strong>Horário:</strong> Ter a Dom – das 11h às 23h
+            </div>
+            <div>
+                <strong>Instagram:</strong>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">@hamburgueria_sabor_e_brasa</a>
+            </div>
+        </div>
+
+        <div class="footer-dev">
+            <a href="https://wa.me/5561981227195" target="_blank" rel="noopener noreferrer">
+                Desenvolvido por Cody-Finity
+            </a>
+        </div>
+    </footer>
+    <style>
+    .footer-imperial {
+        background: #41414171;
+        color: #fff;
+        padding: 24px 0 12px 0;
+        margin-top: 40px;
+        font-size: 1rem;
+        text-align: center;
+        font-family: 'Roboto', Arial, sans-serif;
+    }
+    .footer-info > div {
+        margin: 4px 0;
+    }
+    .footer-info a {
+        color: #ffb300;
+        text-decoration: none;
+    }
+    .footer-info a:hover {
+        text-decoration: underline;
+    }
+    .footer-dev {
+        margin-top: 12px;
+        font-size: 0.95em;
+        color: #bbb;
+    }
+    </style>
+    <script>
+        const carrinho = [];
+        const numeroWhatsApp = '5561981227195'; // Número do restaurante
+
+        function adicionarCarrinho(item, preco) {
+            carrinho.push({ item, preco });
+            atualizarCarrinho();
+            mostrarNotificacao(`✔️ ${item} adicionado ao carrinho!`);
+
+            // Efeito visual no item do cardápio
+            const buttons = document.querySelectorAll('.adicionar-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.includes(item)) {
+                    btn.classList.add('destaque');
+                    setTimeout(() => btn.classList.remove('destaque'), 2000);
+                }
+            });
+        }
+
+        function removerCarrinho(index) {
+            const itemRemovido = carrinho[index].item;
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+            mostrarNotificacao(`❌ ${itemRemovido} removido do carrinho`, 'erro');
+        }
+
+        function atualizarCarrinho() {
+            const lista = document.getElementById('lista-carrinho');
+            const total = document.getElementById('total');
+            lista.innerHTML = '';
+
+            if (carrinho.length === 0) {
+                lista.innerHTML = '<li class="empty-cart">Seu carrinho está vazio</li>';
+                total.textContent = 'Total: R$ 0,00';
+                return;
+            }
+
+            let soma = 0;
+            carrinho.forEach(({ item, preco }, i) => {
+                const li = document.createElement('li');
+                li.className = 'carrinho-item';
+                li.innerHTML = `
+                    <span>${item} - R$ ${preco.toFixed(2).replace('.', ',')}</span>
+                    <button class="remover-btn" onclick="removerCarrinho(${i})">Remover</button>
+                `;
+                lista.appendChild(li);
+                soma += preco;
+            });
+
+            total.textContent = `Total: R$ ${soma.toFixed(2).replace('.', ',')}`;
+        }
+
+        function mostrarNotificacao(mensagem, tipo = 'sucesso') {
+            const notificacao = document.createElement('div');
+            notificacao.className = `notificacao ${tipo === 'erro' ? 'erro' : ''}`;
+            notificacao.innerHTML = `
+                ${tipo === 'erro' ? '❌' : '✔️'} ${mensagem}
+            `;
+
+            document.body.appendChild(notificacao);
+
+            setTimeout(() => {
+                notificacao.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                notificacao.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notificacao);
+                }, 400);
+            }, 3000);
+        }
+
+        function validarTelefone(telefone) {
+            const numeroLimpo = telefone.replace(/\D/g, '');
+            return numeroLimpo.length >= 10 && numeroLimpo.length <= 13;
+        }
+
+        function formatarTelefone(telefone) {
+            const numeroLimpo = telefone.replace(/\D/g, '');
+            if (numeroLimpo.length === 11) {
+                return numeroLimpo.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            }
+            return telefone;
+        }
+
+        function enviarPedido() {
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const mesa = document.getElementById('mesa').value.trim();
+            const observacoes = document.getElementById('observacoes').value.trim();
+
+            // Validações
+            if (!nome) {
+                mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
+                document.getElementById('nome').focus();
+                return;
+            }
+
+            if (!telefone || !validarTelefone(telefone)) {
+                mostrarNotificacao('Por favor, informe um WhatsApp válido com DDD.', 'erro');
+                document.getElementById('telefone').focus();
+                return;
+            }
+
+            if (!mesa) {
+                mostrarNotificacao('Por favor, informe a mesa ou "Entrega".', 'erro');
+                document.getElementById('mesa').focus();
+                return;
+            }
+
+            if (carrinho.length === 0) {
+                mostrarNotificacao('Seu carrinho está vazio. Adicione itens!', 'erro');
+                return;
+            }
+
+            // Mostrar loading
+            document.getElementById('loading').style.display = 'block';
+            document.querySelector('.enviar-btn').disabled = true;
+
+            // Formatar mensagem
+            let mensagem = `*🏮 PEDIDO - RESTAURANTE CHINÊS IMPERIAL 🏮*\n\n` +
+                `👤 *Cliente:* ${nome}\n` +
+                `📱 *WhatsApp:* ${formatarTelefone(telefone)}\n` +
+                `📍 *Mesa/Entrega:* ${mesa}\n\n` +
+                `🍽️ *Itens do Pedido:*\n`;
+
+            carrinho.forEach(({ item, preco }) => {
+                mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
+            });
+
+            const total = carrinho.reduce((s, i) => s + i.preco, 0);
+            mensagem += `\n💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
+                `⏱️ *Tempo estimado:* 30-40 minutos\n`;
+
+            if (observacoes) {
+                mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
+            }
+
+            mensagem += `🙏 *Agradecemos pela preferência!*\n` +
+                `🔔 Seu pedido será preparado em breve.`;
+
+            // Codificar a mensagem para URL
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            const url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+
+            // Abrir WhatsApp após pequeno delay para mostrar o loading
+            setTimeout(() => {
+                window.open(url, '_blank');
+                document.getElementById('loading').style.display = 'none';
+                document.querySelector('.enviar-btn').disabled = false;
+
+                // Limpar carrinho após envio
+                carrinho.length = 0;
+                atualizarCarrinho();
+                document.getElementById('nome').value = '';
+                document.getElementById('telefone').value = '';
+                document.getElementById('mesa').value = '';
+                document.getElementById('observacoes').value = '';
+
+                // Notificação de sucesso
+                mostrarNotificacao('✅ Pedido enviado com sucesso!');
+            }, 1500);
+        }
+
+        // Máscara para telefone
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.substring(0, 11);
+
+            if (value.length > 0) {
+                value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+                if (value.length > 10) {
+                    value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+                }
+            }
+
+            e.target.value = value;
+        });
+
+        // Inicializar carrinho vazio
+        atualizarCarrinho();
+    </script>
+</body>
+
+</html>
