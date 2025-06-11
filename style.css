@@ -192,7 +192,24 @@ h2 {
     box-shadow: var(--sombra);
     margin-bottom: 2rem;
 }
-
+#abrir-maps{
+    background-color: #ffffff;
+    height: 50px;
+    right: 100px;
+    width: 50px;
+ 
+}
+#abrir-maps:hover {
+    background-color: #00fc15;
+}
+#endereco {
+    word-break: break-word;
+    
+    font-weight: 500;
+    color: var(--preto-lacrado);
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
 .form-group {
     margin-bottom: 1.5rem;
 }
