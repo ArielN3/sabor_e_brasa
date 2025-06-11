@@ -193,7 +193,9 @@ h2 {
     margin-bottom: 2rem;
 }
 #abrir-maps{
-    background-color: #ffffff;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     height: 50px;
     right: 100px;
     width: 50px;
@@ -212,6 +214,10 @@ h2 {
 }
 .form-group {
     margin-bottom: 1.5rem;
+}
+.form-group p{
+    color: #727272;
+    font-size: 14px;
 }
 
 .form-group label {
@@ -270,7 +276,66 @@ input:focus, textarea:focus {
 .enviar-btn:active {
     transform: translateY(0);
 }
+footer {
+    background-image: url('fundowal.jpg');
+    /* Imagem de fundo do footer */
+    background-size: cover;
+    background-color: #000000b0;
+    /* Cor de fundo do footer */
+    color: #ffffff;
+    /* Cor do texto */
+    padding: 20px 0;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o conteúdo */
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    border-top: 1px solid #333;
+    /* Linha superior para destacar o footer */
+}
 
+/* Container do conteúdo do footer */
+.footer-content {
+    max-width: 1200px;
+    /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    /* Centraliza o conteúdo na página */
+}
+
+/* Ícone do Instagram */
+.instagram-icon {
+    width: 80px;
+    /* Tamanho do ícone */
+    height: 80px;
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do ícone */
+    transition: transform 0.2s ease;
+    /* Efeito de hover suave */
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+    /* Aumenta levemente o ícone ao passar o mouse */
+}
+
+.self-promotion {
+    text-align: right;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #f8f8f800; /* opcional: fundo sutil */
+}
+
+.self-promotion a {
+    color: #42014b; /* cor do tema */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.self-promotion a:hover {
+    text-decoration: underline;
+}
 #tempo-espera {
     background: linear-gradient(to right, #FFF9E6, #FFF4D4);
     padding: 1rem;
