@@ -388,41 +388,7 @@
             </p>
         </div>
     </footer>
-    <style>
-        .footer-imperial {
-           
-            background-image: url("fundowal.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            
-            background-position: center;
-            color: #fff;
-            padding: 24px 0 12px 0;
-            margin-top: 40px;
-            font-size: 1rem;
-            text-align: center;
-            font-family: 'Roboto', Arial, sans-serif;
-        }
-
-        .footer-info>div {
-            margin: 3px 0;
-        }
-
-        .footer-info a {
-            color: #fffb00;
-            text-decoration: none;
-        }
-
-        .footer-info a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-dev {
-            margin-top: 12px;
-            font-size: 0.95em;
-            color: #bbb;
-        }
-    </style>
+    
     <script>
         const carrinho = [];
         const numeroWhatsApp = '5561981227195'; // Número do restaurante
@@ -510,83 +476,83 @@
         }
 
         function enviarPedido() {
-            const nome = document.getElementById('nome').value.trim();
-            const telefone = document.getElementById('telefone').value.trim();
-            const mesa = document.getElementById('mesa').value.trim();
-            const observacoes = document.getElementById('observacoes').value.trim();
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const endereco = document.getElementById('endereco').value.trim();
+    const observacoes = document.getElementById('observacoes').value.trim();
 
-            // Validações
-            if (!nome) {
-                mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
-                document.getElementById('nome').focus();
-                return;
-            }
+    // Validações
+    if (!nome) {
+        mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
+        document.getElementById('nome').focus();
+        return;
+    }
 
-            if (!telefone || !validarTelefone(telefone)) {
-                mostrarNotificacao('Por favor, informe um WhatsApp válido com DDD.', 'erro');
-                document.getElementById('telefone').focus();
-                return;
-            }
+    if (!telefone || !validarTelefone(telefone)) {
+        mostrarNotificacao('Por favor, informe um WhatsApp válido com DDD.', 'erro');
+        document.getElementById('telefone').focus();
+        return;
+    }
 
-            if (!mesa) {
-                mostrarNotificacao('Por favor, informe a mesa ou "Entrega".', 'erro');
-                document.getElementById('mesa').focus();
-                return;
-            }
+    if (!endereco) {
+        mostrarNotificacao('Por favor, informe o endereço para entrega.', 'erro');
+        document.getElementById('endereco').focus();
+        return;
+    }
 
-            if (carrinho.length === 0) {
-                mostrarNotificacao('Seu carrinho está vazio. Adicione itens!', 'erro');
-                return;
-            }
+    if (carrinho.length === 0) {
+        mostrarNotificacao('Seu carrinho está vazio. Adicione itens!', 'erro');
+        return;
+    }
 
-            // Mostrar loading
-            document.getElementById('loading').style.display = 'block';
-            document.querySelector('.enviar-btn').disabled = true;
+    // Mostrar loading
+    document.getElementById('loading').style.display = 'block';
+    document.querySelector('.enviar-btn').disabled = true;
 
-            // Formatar mensagem
-            let mensagem = `*🏮 PEDIDO - HAMBURGUERIA SABOR E BRASA 🏮*\n\n` +
-                `👤 *Cliente:* ${nome}\n` +
-                `📱 *WhatsApp:* ${formatarTelefone(telefone)}\n` +
-                `📍 *Mesa/Entrega:* ${mesa}\n\n` +
-                `🍽️ *Itens do Pedido:*\n`;
+    // Formatar mensagem
+    let mensagem = `*🍔 PEDIDO - HAMBURGUERIA SABOR E BRASA 🍔*\n\n` +
+        `👤 *Cliente:* ${nome}\n` +
+        `📱 *WhatsApp:* ${formatarTelefone(telefone)}\n` +
+        `📍 *Endereço para entrega:* ${endereco}\n\n` +
+        `🍽️ *Itens do Pedido:*\n`;
 
-            carrinho.forEach(({ item, preco }) => {
-                mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
-            });
+    carrinho.forEach(({ item, preco }) => {
+        mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
+    });
 
-            const total = carrinho.reduce((s, i) => s + i.preco, 0);
-            mensagem += `\n💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
-                `⏱️ *Tempo estimado:* 30-40 minutos\n`;
+    const total = carrinho.reduce((s, i) => s + i.preco, 0);
+    mensagem += `\n💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
+        `⏱️ *Tempo estimado:* 30-40 minutos\n`;
 
-            if (observacoes) {
-                mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
-            }
+    if (observacoes) {
+        mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
+    }
 
-            mensagem += `🙏 *Agradecemos pela preferência!*\n` +
-                `🔔 Seu pedido será preparado em breve.`;
+    mensagem += `🙏 *Agradecemos pela preferência!*\n` +
+        `🔔 Seu pedido será preparado em breve.`;
 
-            // Codificar a mensagem para URL
-            const mensagemCodificada = encodeURIComponent(mensagem);
-            const url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+    // Codificar a mensagem para URL
+    const mensagemCodificada = encodeURIComponent(mensagem);
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
-            // Abrir WhatsApp após pequeno delay para mostrar o loading
-            setTimeout(() => {
-                window.open(url, '_blank');
-                document.getElementById('loading').style.display = 'none';
-                document.querySelector('.enviar-btn').disabled = false;
+    // Abrir WhatsApp após pequeno delay para mostrar o loading
+    setTimeout(() => {
+        window.open(url, '_blank');
+        document.getElementById('loading').style.display = 'none';
+        document.querySelector('.enviar-btn').disabled = false;
 
-                // Limpar carrinho após envio
-                carrinho.length = 0;
-                atualizarCarrinho();
-                document.getElementById('nome').value = '';
-                document.getElementById('telefone').value = '';
-                document.getElementById('mesa').value = '';
-                document.getElementById('observacoes').value = '';
+        // Limpar carrinho após envio
+        carrinho.length = 0;
+        atualizarCarrinho();
+        document.getElementById('nome').value = '';
+        document.getElementById('telefone').value = '';
+        document.getElementById('endereco').value = '';
+        document.getElementById('observacoes').value = '';
 
-                // Notificação de sucesso
-                mostrarNotificacao('✅ Pedido enviado com sucesso!');
-            }, 1500);
-        }
+        // Notificação de sucesso
+        mostrarNotificacao('✅ Pedido enviado com sucesso!');
+    }, 1500);
+}
 
         // Máscara para telefone
         document.getElementById('telefone').addEventListener('input', function (e) {
