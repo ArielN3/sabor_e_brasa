@@ -296,9 +296,37 @@
             </div>
 
             <div class="form-group">
-                <label for="mesa">Mesa/Entrega</label>
-                <input type="text" id="mesa" placeholder="Número da mesa ou endereço" required>
-            </div>
+    <label for="endereco">Endereço para Entrega</label>
+    
+    <div style="display: flex; gap: 5px;">
+        <input type="text" id="endereco" placeholder="Digite seu endereço. Em Seguida presione o botão ao lado, e copie o link de compartilhar e cole aqui" required style="flex: 1;">
+        <!-- Botão para abrir o Google Maps -->
+        
+        <button type="button" id="abrir-maps" title="Abrir no Google Maps">
+            <i class="fas fa-map-marked-alt" ></i> <!-- Ícone do Font Awesome -->
+        </button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('abrir-maps').addEventListener('click', function() {
+        const endereco = document.getElementById('endereco').value.trim();
+        
+        if (endereco === '') {
+            alert('Por favor, digite um endereço primeiro');
+            return;
+        }
+        
+        // Codifica o endereço para URL
+        const enderecoCodificado = encodeURIComponent(endereco);
+        
+        // Abre o Google Maps com o endereço fornecido
+        window.open(`https://www.google.com/maps/search/?api=1&query=${enderecoCodificado}`, '_blank');
+    });
+</script>
+
+<!-- Opcional: Link para o Font Awesome se não estiver incluído -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
             <div class="form-group">
                 <label for="observacoes">Observações</label>
